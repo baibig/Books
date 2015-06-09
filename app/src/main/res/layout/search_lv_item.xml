@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_corner">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_item_height"
+        android:orientation="horizontal">
+        <com.android.volley.toolbox.NetworkImageView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:maxWidth="100dp"
+            android:id="@+id/search_item_img"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+            <me.grantland.widget.AutofitTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/search_item_name"
+                android:layout_weight="0.7"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="阳光沉醉的早上"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/search_item_year"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="2015"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/search_item_price"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="36"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <me.grantland.widget.AutofitTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/search_item_rating"
+                    android:textColor="@color/red"
+                    android:text="9.2"/>
+                <me.grantland.widget.AutofitTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/search_item_comments"
+                    android:paddingLeft="10dp"
+                    android:text="(10987人评论)"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
