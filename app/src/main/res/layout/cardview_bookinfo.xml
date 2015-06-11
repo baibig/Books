@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android:android.support.v7.widget.CardView
+<android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <LinearLayout android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <ImageView
+            <com.android.volley.toolbox.NetworkImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/cardview_bookinfo_pic"
-                android:src="@drawable/cardview_bookinfo_img_pic"/>
+                android:id="@+id/cardview_bookinfo_pic" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cardview_bookinfo_pic"
+                android:paddingLeft="@dimen/layout_horizontal_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:id="@+id/cardview_bookinfo_tv_title"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -21,19 +31,22 @@
                 android:layout_toRightOf="@id/cardview_bookinfo_pic"
                 android:layout_alignBottom="@id/cardview_bookinfo_pic"
                 android:layout_alignBaseline="@id/cardview_bookinfo_pic">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1">
                     <ImageView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:id="@+id/cardview_bookinfo_img_author"
                         android:src="@drawable/img_book_info_user"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
                         android:id="@+id/cardview_bookinfo_tv_author"
                         android:text="路遥"/>
                 </LinearLayout>
@@ -43,13 +56,16 @@
                     android:orientation="horizontal"
                     android:layout_weight="1">
                     <ImageView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+
                         android:id="@+id/cardview_bookinfo_img_time"
                         android:src="@drawable/img_book_info_time"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
                         android:id="@+id/cardview_bookinfo_tv_time"
                         android:text="路遥"/>
                 </LinearLayout>
@@ -59,13 +75,15 @@
                     android:orientation="horizontal"
                     android:layout_weight="1">
                     <ImageView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:id="@+id/cardview_bookinfo_img_papers"
                         android:src="@drawable/img_book_info_papers"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
                         android:id="@+id/cardview_bookinfo_tv_papers"
                         android:text="路遥"/>
                 </LinearLayout>
@@ -75,13 +93,15 @@
                     android:orientation="horizontal"
                     android:layout_weight="1">
                     <ImageView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:id="@+id/cardview_bookinfo_img_press"
                         android:src="@drawable/img_book_info_press"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
                         android:id="@+id/cardview_bookinfo_tv_press"
                         android:text="路遥"/>
                 </LinearLayout>
@@ -91,13 +111,15 @@
                     android:orientation="horizontal"
                     android:layout_weight="1">
                     <ImageView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:id="@+id/cardview_bookinfo_img_isbn"
                         android:src="@drawable/img_book_info_isbn"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
                         android:id="@+id/cardview_bookinfo_tv_isbn"
                         android:text="路遥"/>
                 </LinearLayout>
@@ -107,13 +129,15 @@
                     android:orientation="horizontal"
                     android:layout_weight="1">
                     <ImageView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:id="@+id/cardview_bookinfo_img_price"
                         android:src="@drawable/img_book_info_price"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
                         android:id="@+id/cardview_bookinfo_tv_price"
                         android:text="路遥"/>
                 </LinearLayout>
@@ -123,13 +147,15 @@
                     android:orientation="horizontal"
                     android:layout_weight="1">
                     <ImageView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:id="@+id/cardview_bookinfo_img_rating"
                         android:src="@drawable/img_book_info_rating"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
                         android:id="@+id/cardview_bookinfo_tv_rating"
                         android:text="路遥"/>
                 </LinearLayout>
@@ -137,32 +163,40 @@
             </LinearLayout>
 
         </RelativeLayout>
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/book_info_tag_height"
             android:layout_below="@id/cardview_bookinfo_pic"
-            android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingTop="32dp"
+            android:layout_marginTop="32dp"
+
             >
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:layout_gravity="top"
                 android:id="@+id/cardview_bookinfo_img_tag"
+                android:layout_marginRight="2dp"
                 android:src="@drawable/img_book_info_tag"/>
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/cardview_bookinfo_tv_tag"
-                android:layout_toRightOf="@id/cardview_bookinfo_img_tag"
-                android:text="平凡的世界 路遥 励志 小说 命运 中国文学 坚强 中国"/>
-            <com.gc.materialdesign.views.ButtonRectangle
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"
-                android:id="@+id/cardview_bookinfo_btn_reviews"
-                android:text="@string/cardview_bookinfo_btn_reviews"
-                android:layout_alignParentRight="true"/>
-        </RelativeLayout>
+                android:layout_height="wrap_content"
+                android:id="@+id/cardview_bookinfo_tv_tag"
+                android:layout_gravity="start"
+                android:paddingLeft="2dp"
+                android:text="平凡的世界 路遥 励志 小说 命运 中国文学 坚强 中国"
+                android:singleLine="false"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="32dp"
+                android:id="@+id/cardview_bookinfo_btn_see"
+                android:text="书评"
+                android:gravity="center"
+                android:layout_marginLeft="2dp"
+                android:background="@color/toolbar_blue"
+                />
+        </LinearLayout>
     </LinearLayout>
-</android:android.support.v7.widget.CardView>
+</android.support.v7.widget.CardView>

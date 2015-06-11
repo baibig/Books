@@ -3,55 +3,35 @@
     xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
     xmlns:fab="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
-    <LinearLayout
+    android:layout_height="match_parent">
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <!--<include layout="@layout/cardview_bookinfo"/>
-        <include layout="@layout/cardview_booksummary"/>
-        <include layout="@layout/cardview_bookcatalog"/>-->
-    </LinearLayout>
-    <!--<com.gc.materialdesign.views.ButtonFloat
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/cardview_bookinfo"/>
+            <include layout="@layout/cardview_booksummary"/>
+            <include layout="@layout/cardview_bookcatalog"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/toolbar_blue"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="16dp"
-        materialdesign:animate="true"
-        materialdesign:iconDrawable="@drawable/img_share"/>-->
-    <com.getbase.floatingactionbutton.FloatingActionsMenu
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="16dp"
-        fab:fab_addButtonColorNormal="@color/white"
-        fab:fab_addButtonColorPressed="@color/blue"
-        fab:fab_addButtonPlusIconColor="@color/red"
-        fab:fab_labelStyle="@style/menu_labels_style"
-        >
-        <com.getbase.floatingactionbutton.FloatActionButton
-            android:id="@+id/action_a"
+        android:layout_alignParentRight="true">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/activity_btn_share"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            fab:fab_colorNormal="@color/white"
-            fab:fab_title="Action A"
-            fab:fab_colorPressed="@color/blue"/>
-        <com.getbase.floatingactionbutton.FloatActionButton
-            android:id="@+id/action_b"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            fab:fab_colorNormal="@color/white"
-            fab:fab_title="Action with a very long name that won\'t fit on the screen"
-            fab:fab_colorPressed="@color/blue"/>
-        <com.getbase.floatingactionbutton.FloatActionButton/>
-    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+            android:src="@drawable/img_share"
+            android:background="@drawable/btn_share"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"/>
+    </android.support.design.widget.CoordinatorLayout>
+
 
 
 

@@ -15,7 +15,7 @@ import java.lang.reflect.Field;
 import java.util.Random;
 
 
-public class MainActivity extends ActionBarActivity{
+public class MainActivity extends ActionBarActivity implements Thread.UncaughtExceptionHandler{
 
     ImageView mImageView;
     LinearLayout mScan;
@@ -23,9 +23,11 @@ public class MainActivity extends ActionBarActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(AppControlor.TAG,"hello");
+        Thread.setDefaultUncaughtExceptionHandler(this);
         super.onCreate(savedInstanceState);
-        Log.i(AppControlor.TAG, "huangjian");
         setContentView(R.layout.activity_main);
+
         mImageView= (ImageView) findViewById(R.id.imageview_home);
         Random rando=new Random();
         int r=rando.nextInt(8)+1;
@@ -57,4 +59,8 @@ public class MainActivity extends ActionBarActivity{
 
     }
 
+    @Override
+    public void uncaughtException(Thread thread, Throwable throwable) {
+        throwable.printStackTrace();
+    }
 }

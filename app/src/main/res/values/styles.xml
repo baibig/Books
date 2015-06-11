@@ -1,14 +1,12 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppThemeBase" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppThemeBase" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
     </style>
 
     <style name="AppTheme" parent="AppThemeBase">
-        <item name="colorPrimaryDark">@color/primary_material_light</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
     </style>
 
 </resources>
